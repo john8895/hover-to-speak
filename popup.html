@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; padding: 12px; width: 260px; margin: 0; }
+  h1 { font-size: 13px; margin: 0 0 12px; }
+  label { display: block; font-size: 11px; color: #666; margin-bottom: 4px; }
+  select, button { width: 100%; font-size: 13px; padding: 6px; box-sizing: border-box; }
+  button { margin-top: 8px; cursor: pointer; }
+  .row { margin-bottom: 10px; }
+
+  #login-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 14px;
+    transition: background 0.15s, color 0.15s;
+    letter-spacing: 0.03em;
+  }
+  #login-btn.state-off {
+    background: #16a34a;
+    color: #fff;
+  }
+  #login-btn.state-off:hover { background: #15803d; }
+  #login-btn.state-on {
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+  }
+  #login-btn.state-on:hover { background: #fee2e2; color: #dc2626; border-color: #fca5a5; }
+
+  #settings { display: none; }
+  #settings.visible { display: block; }
+</style>
+</head>
+<body>
+  <h1>Hover to Speak</h1>
+
+  <button id="login-btn" class="state-off">登入</button>
+
+  <div id="settings">
+    <div class="row">
+      <label for="voice">Voice (English only)</label>
+      <select id="voice"></select>
+    </div>
+    <button id="test">Test voice</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Hover to Speak",
+  "version": "0.2.0",
+  "description": "Alt + hover/click to TTS page elements for English listening practice",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hover to Speak"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
