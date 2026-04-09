@@ -7,12 +7,10 @@ const testBtn = document.getElementById('test');
 
 const applyLoginState = (enabled) => {
   if (enabled) {
-    loginBtn.textContent = '已登入　登出';
     loginBtn.classList.remove('state-off');
     loginBtn.classList.add('state-on');
     settings.classList.add('visible');
   } else {
-    loginBtn.textContent = '登入';
     loginBtn.classList.remove('state-on');
     loginBtn.classList.add('state-off');
     settings.classList.remove('visible');
